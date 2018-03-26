@@ -45,7 +45,7 @@ public class MovieDatabaseSummarizer {
 
             // 2 feedback words that were used the most
             Map<String, Long> appearances = actors.stream()
-                    .map(actor -> actor.getActotName())
+                    .map(actor -> actor.getActorName())
                     .map(actor ->actor.split(","))
                     .flatMap(hierd -> Arrays.stream(hierd))
                     .collect(Collectors.groupingBy(e -> e, Collectors.counting()));

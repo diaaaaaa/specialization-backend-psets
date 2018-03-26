@@ -1,13 +1,11 @@
+
 package com.l.pset.pset1.model;
 
 import java.util.List;
 
 public class Actor {
-    private String actotName;
-    private List<String> ActorsMaleFemaleRatio ;
-
-
-
+    private String actorName;
+    private List<String> ActorsMaleFemaleRatio;
 
     public void setActorsMaleFemaleRatio(List<String> actorsMaleFemaleRatio) {
         ActorsMaleFemaleRatio = actorsMaleFemaleRatio;
@@ -19,11 +17,11 @@ public class Actor {
         return ActorsMaleFemaleRatio;
     }
 
-    public String getActotName() {
-        return actotName;
+    public String getActorName() {
+        return actorName;
     }
 
-    public void setActotName(String actotName) {
-        this.actotName = actotName;
+    public void setActorName(String actorName) {
+         this.actorName = actorName;
     }
 }

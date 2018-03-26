@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -30,7 +29,7 @@ public class ActorParser {
     private Function<String[], Actor> toActor() {
         return columns -> {
             Actor actor = new Actor();
-            actor.setActotName(toRealActor(columns[0]));
+            actor.setActorName(toRealActor(columns[0]));
             actor.setActorsMaleFemaleRatio(toGender(columns[0]));
             return actor;
         };
