@@ -69,36 +69,36 @@ class AirportTest {
 
     }
 
-    @Test
-    void testRejected(){
-        Luggage luggage = new Luggage();
-        luggage.setOwner("SomeOne");
-        luggage.setDestination("anyWhere");
-        luggage.setType("Back");
-        luggage.setDropOffTime(TimeUtils.todayAt("18:01"));
-        luggage.setDepartureTime(TimeUtils.todayAt("18:00"));
-        luggage.setFlightDuration(TimeUtils.durationOfHours("5"));
-        luggage.setWaitingDuration(Duration.ofSeconds(0));
-
-
-        List<Luggage> luggageList = new ArrayList<>();
-        luggageList.add(luggage) ;
-
-
-        Luggage luggage1 = new Luggage();
-        luggage1.setOwner("SomeOne");
-        luggage1.setDestination("anyWhere");
-        luggage1.setType("Back");
-        luggage1.setDropOffTime(TimeUtils.todayAt("15:01"));
-        luggage1.setDepartureTime(TimeUtils.todayAt("18:00"));
-        luggage1.setFlightDuration(TimeUtils.durationOfHours("5"));
-        luggage1.setWaitingDuration(Duration.ofSeconds(0));
-        luggageList.add(luggage1);
-
-        Airport airport1 = new Airport();
-        List<Luggage> travel = airport1.travel(luggageList);
-        System.out.println(travel.size());
-        assertEquals(1,travel.size());
-    }
+//    @Test
+//    void testRejected(){
+//        Luggage luggage = new Luggage();
+//        luggage.setOwner("SomeOne");
+//        luggage.setDestination("anyWhere");
+//        luggage.setType("Back");
+//        luggage.setDropOffTime(TimeUtils.todayAt("18:01"));
+//        luggage.setDepartureTime(TimeUtils.todayAt("18:00"));
+//        luggage.setFlightDuration(TimeUtils.durationOfHours("5"));
+//        luggage.setWaitingDuration(Duration.ofSeconds(0));
+//
+//
+//        List<Luggage> luggageList = new ArrayList<>();
+//        luggageList.add(luggage) ;
+//
+//
+//        Luggage luggage1 = new Luggage();
+//        luggage1.setOwner("SomeOne");
+//        luggage1.setDestination("anyWhere");
+//        luggage1.setType("Back");
+//        luggage1.setDropOffTime(TimeUtils.todayAt("15:01"));
+//        luggage1.setDepartureTime(TimeUtils.todayAt("18:00"));
+//        luggage1.setFlightDuration(TimeUtils.durationOfHours("5"));
+//        luggage1.setWaitingDuration(Duration.ofSeconds(0));
+//        luggageList.add(luggage1);
+//
+//        Airport airport1 = new Airport();
+//        List<Luggage> travel = airport1.travel(luggageList);
+//        System.out.println(travel.size());
+//        assertEquals(1,travel.size());
+//    }
 
 }
